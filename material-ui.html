@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material UI</title>
+
+    <script type="text/javascript">
+        var apiUrl = 'https://webdev-herok.herokuapp.com/resume';
+        fetch(apiUrl).then(response => {
+            document.getElementById("resume") = response.json();
+            console.log(response);
+          return response.json();
+        }).then(data => {
+          // Work with JSON data here
+          console.log(data);
+        }).catch(err => {
+          // Do something for an error here
+        });
+    </script>
+
+
+</head>
+<body>
+
+    <div id="resume">
+
+    </div>
+
+    
+
+    
+</body>
+</html>

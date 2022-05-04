@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1 id="id01">Old Heading</h1>
+
+<script>
+const element = document.getElementById("id01");
+element.innerHTML = "New Heading";
+</script>
+<script>
+  fetch('http://localhost:8081/greetings',{ method: "GET", mode: 'cors', headers: { 'Content-Type': 'application/json',}})
+   .then( response => response.json() )
+   .then( data => console.log(data) )
+</script>
+  
+</body>
+</html>
